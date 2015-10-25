@@ -21,6 +21,8 @@ the data .
 
 * `subject` - The ID of the test.
 * `activity` - The type of activity, For example: WALKING, SITTING, STANDING, LAYING)
+
+
 ## variables
 
 Any variables with '-XYZ' is used to denote 3-axial signals 
