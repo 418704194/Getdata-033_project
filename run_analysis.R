@@ -36,3 +36,6 @@ tidy.data[,c("subject","activity",featMSIndex)]->dat
 
 #new data set with the average of each variable for each activity and each subject.
 if (!require(data.table)){install.packages("data.table");library("data.table")}
+as.data.table(dat)->dat
+dat[,lapply(.SD,mean),by=.(subject,activity)]->datEAS
+write.table(file="DatEachActivityAndSubject.txt",datEAS,row.names = F,col.names = T,quote = F,sep = "\t")
